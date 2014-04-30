@@ -15,8 +15,8 @@ RUN add-apt-repository 'deb http://download.nus.edu.sg/mirror/mariadb/repo/5.5/u
 RUN apt-get update -qq
 RUN apt-get install -y --force-yes mariadb-server
 
-ADD my.cnf /etc/mysql/conf.d/my.cnf
-RUN chmod 664 /etc/mysql/conf.d/my.cnf
+ADD my.cnf /etc/mysql/my.cnf
+RUN chmod 664 /etc/mysql/my.cnf
 ADD run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 
