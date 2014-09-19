@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 MAINTAINER Sergey Shkolin <sergey@shkolin.net.ua>
 
 # Common
@@ -20,6 +20,5 @@ RUN chmod 664 /etc/mysql/my.cnf
 ADD run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 
-#VOLUME ["/var/lib/mysql"]
 EXPOSE 3306
 CMD ["/usr/local/bin/run"]
